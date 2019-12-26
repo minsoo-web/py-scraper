@@ -23,12 +23,13 @@
             let timerId = setTimeout(function recursive(){
                 document.write(from,"<br>");
                 from++;
-                setTimeout(recursive,1000);
+                if(from<to){
+                    setTimeout(recursive,1000);
+                }
+                else{
+                    alert("time to end");
+                }
             }, 1000);
-            setTimeout(() => {
-                clearInterval(timerId);
-                alert("end");
-            }, 1000*to);
         }
         printNumbers2(1,10);
     </script>
