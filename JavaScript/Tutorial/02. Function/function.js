@@ -90,3 +90,18 @@ console.log(numbers.sort(sortfunc));  // 배열이라는 객체 안에 내장되
 
 // 비동기 처리에서의 콜백 
 
+// 함수의 호출 -> apply의 사용
+o1 = {val1:1,val2:2,val3:3};
+o2 = {v1 : 10, v2 : 50, v3 : 100, v4: 25};
+// 객체랑 별개의 함수 선언 -> 이때까지는 메서드가 아니라 함수다
+function sum() {
+    var _sum =0;
+    for(name in this){
+        _sum += this[name];
+    }
+    return _sum;   
+}
+// apply를 하는 순간 sum은 함수가 아니라 객체의 메서드가 되어서 호출 되는 거다.
+alert(sum.apply(o1)); // == 01.sum(); 과 같은 코드 
+alert(sum.apply(o2));
+

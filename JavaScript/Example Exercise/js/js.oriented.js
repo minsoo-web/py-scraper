@@ -5,7 +5,7 @@ var memberObject ={
     manager:'egoing',
     developer:'graphittie',
     designer:'leezhce'
-}
+};
 // 읽는 법 
 console.log(memberObject.designer);
 console.log(memberObject['designer']);
@@ -36,5 +36,5 @@ let MyMath = {
     floor:function(){
         return Math.floor(val);
     }
-}
+};
 

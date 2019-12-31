@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+    <!-- 이 부분에 prepend가 되어진다.  -->
+    <script>
+        jQuery(document).ready(function($)
+        {
+            $('body').prepend('<h1>Hello world!</h1>');
+        });
+    </script>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <input type="button" value="jQuery" onclick="jq()">
+    <script>
+        function jq(){
+            $('li').css('color','red').css('list-style','none');
+        }
+    </script>
+</body>
+</html>
