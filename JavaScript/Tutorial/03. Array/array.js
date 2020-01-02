@@ -145,3 +145,4 @@ const arr = [1,2,3];
 const [one,two,three] = arr;
 
 document.write("할당된 변수 호출",one,two,three,"<br>");
+
