@@ -103,3 +103,57 @@ function adder(a, b) {
   return ((a + b) * (Math.abs(b - a) + 1)) / 2;
 }
 ```
+
+## 5. 문자열 내 맘대로 정렬하기
+
+문제 원본  
+https://programmers.co.kr/learn/courses/30/lessons/12915
+
+이번 문제는 문자열 내의 알파벳에 따른 정렬을 하는 문제이다.  
+단번에 생각난 메소드는 charAt() 메소드인데 sort 가 생각이 안 나서 한동안 헤맸었다.
+
+첫번째 풀이를 보면
+
+```js
+// 처음 풀이
+function solution(strings, n) {
+  var array = [];
+  var answer = [];
+  strings.forEach((s) => {
+    var input = {
+      str: s,
+      char: s.charAt(n),
+    };
+    array.push(input);
+  });
+  array
+    .sort((a, b) => {
+      if (a.char == b.char) return a.str < b.str ? -1 : a.str > b.str ? 1 : 0;
+      return a.char < b.char ? -1 : a.char > b.char ? 1 : 0;
+    })
+    .forEach((e) => {
+      answer.push(e.str);
+    });
+
+  return answer;
+}
+```
+
+문자열 내의 n 번째 알파벳을 따로 저장해서 객체화 했는데  
+문자열안에서도 인덱스 사용이 가능하다는 것을 다른 사람의 풀이를 통해 알게 되었다.
+
+이에 따라 객체화 과정을 없앤 코드를 살펴보자
+
+```js
+function solution(strings, n) {
+  strings.sort((a, b) => {
+    if (a[n] == b[n]) return a < b ? -1 : a > b ? 1 : 0;
+    return a[n] < b[n] ? -1 : a[n] > b[n] ? 1 : 0;
+  });
+  return strings;
+}
+```
+
+### 꾸짖기
+
+문자열 비교 메서드라는 검색을 한번만 해봤다면 어땠을까라는 아쉬움이 크다
