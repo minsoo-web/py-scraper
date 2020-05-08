@@ -157,3 +157,49 @@ function solution(strings, n) {
 ### 꾸짖기
 
 문자열 비교 메서드라는 검색을 한번만 해봤다면 어땠을까라는 아쉬움이 크다
+
+## 6. 문자열 내림차순으로 배치하기
+
+문자열 관련 정렬 문제를 몇번 풀다보니 감이 조금 잡힌다는 느낌이 든다.
+
+한 가지 아쉬웠던 점에 대해서 피드백하고 넘어가려고 한다.
+
+### 꾸짖기
+
+메서드 체이닝을 적극 활용했다면 코드가 더 간결하고 짧아졌을거라 생각함
+
+바꾸기 전
+
+```js
+function solution(s) {
+  var arr = s.split("");
+  str = arr
+    .sort((a, b) => {
+      return a > b ? -1 : a < b ? 1 : 0;
+    })
+    .join("");
+
+  return str;
+}
+```
+
+바꾼 뒤
+
+```js
+function solution(s) {
+  return s.split("").sort((a,b)=> {return a>b ? -1 : a<b ? 1 : 0>}).join("");
+  // sort().reverse() 가 가능하다... ㄸㄹㄹ
+}
+```
+
+## 7. 문자열 다루기 기본
+
+원본 보기  
+https://programmers.co.kr/learn/courses/30/lessons/12918
+
+문자열 길이가 4 또는 6인지를 검증하는 건 문제가 안 되는데  
+문자열이 숫자로만 이루어져 있는지를 검증하는 방법이 뭘까 생각했는데  
+찾아보던중 isNaN 이라는 메소드를 알게 되었다.
+
+추가로 NaN == NaN 이 false 라는 걸 알게되었다.  
+지 자스...
