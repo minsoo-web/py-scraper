@@ -1,3 +1,4 @@
+//  나의 풀이 1.80ms 37.4 MB
 function solution(n) {
   var arr = [];
 
