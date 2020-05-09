@@ -1,4 +1,4 @@
-//  나의 풀이 1.80ms 37.4 MB
+//  나의 풀이
 function solution(n) {
   var arr = [];
 
