@@ -493,3 +493,15 @@ https://programmers.co.kr/learn/courses/30/lessons/12943
 문제 조건을 보면  
 `결과로 나온 수에 같은 작업을 1이 될 때까지 반복합니다.`  
 라는 조건이 있는데 이 문장을 보고 재귀함수가 바로 떠올랐다.
+
+---
+
+## 21. 평균 구하기
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12944
+
+### 칭찬하기
+
+reduce 써먹은거 아주 아주 칭찬해.
