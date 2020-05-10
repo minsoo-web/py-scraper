@@ -372,3 +372,14 @@ https://programmers.co.kr/learn/courses/30/lessons/12933
 sort().reverse() 사용법을 저번 풀이때 배웠는데 활용하지 못했다.  
 물론 원칙상 내림차순 정렬을 하려면 각 요소별로 비교해야 하지만 (자리수가 다른 비교는 오류를 낸다.)  
 이번 문제는 같은 자리수끼리의 비교이기에 메서드 체이닝을 썼다면 조금 더 간결한 코드가 되었을 것 같다.
+
+## 16. 정수 제곱근 판별
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12934
+
+### 몰랐던 메소드
+
+Number.isInteger(number)  
+반환 값 bool
