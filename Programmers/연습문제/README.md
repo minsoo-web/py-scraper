@@ -479,3 +479,17 @@ https://programmers.co.kr/learn/courses/30/lessons/12940
 최소공배수를 구하는 방법은 너무 많은 연산을 요구함.
 
 이게 아닌가? 싶은 생각이 드는 코드는 다시 보자
+
+---
+
+## 20. Collatz 추측
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12943
+
+### 접근 방법
+
+문제 조건을 보면  
+`결과로 나온 수에 같은 작업을 1이 될 때까지 반복합니다.`  
+라는 조건이 있는데 이 문장을 보고 재귀함수가 바로 떠올랐다.
