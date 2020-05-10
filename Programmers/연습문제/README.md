@@ -335,3 +335,19 @@ https://programmers.co.kr/learn/courses/30/lessons/12931
 
 reduce()라는 메소드를 까맣게 잊고 있었다.  
 배열의 원소끼리 합을 구할 때 편한 메소드인데 그걸 까먹고...
+
+## 14. 자연수 뒤집어 배열로 만들기
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12932
+
+### 접근 방법
+
+문제의 조건은 다음과 같다.
+
+1. 자연수 입력 -> 배열 출력
+2. 입력된 자연수를 뒤집어야 함
+
+2-> 배열의 메소드 중 reverse() 사용
+1 -> 숫자 -> 문자열 -> 배열 String() / Number() / split()
