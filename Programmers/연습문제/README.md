@@ -505,3 +505,16 @@ https://programmers.co.kr/learn/courses/30/lessons/12944
 ### 칭찬하기
 
 reduce 써먹은거 아주 아주 칭찬해.
+
+---
+
+## 22. 하샤드 수
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12947
+
+### 칭찬 및 생각
+
+reduce 를 활용한 한 줄 코드 아주 칭찬해.  
+문득 드는 생각이 한 줄 코드의 장점이 뭐지 (쓴 사람만 알아보는 느낌)
