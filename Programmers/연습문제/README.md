@@ -518,3 +518,21 @@ https://programmers.co.kr/learn/courses/30/lessons/12947
 
 reduce 를 활용한 한 줄 코드 아주 칭찬해.  
 문득 드는 생각이 한 줄 코드의 장점이 뭐지 (쓴 사람만 알아보는 느낌)
+
+---
+
+## 23. 핸드폰 번호 가리기
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12948
+
+### 아쉬웠던 점
+
+삼항식을 쓰지 않고 if else 문을 써서 return을 두 번 쓴게 아쉬웠다.
+
+### 몰랐던 메소드
+
+String.prototype.repeat(n)
+
+n번만큼 반복한 문자열을 반환
