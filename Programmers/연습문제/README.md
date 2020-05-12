@@ -570,6 +570,18 @@ https://programmers.co.kr/learn/courses/30/lessons/12954
 문자열도 안 주어지고 처음부터 배열을 조건에 맞게 만들어 가는거니까  
 push를 사용해야 겠다고 생각했다.
 
-근데 Array(n).fill(x) 을 하면 기본 베이스는 만들어놓고 map 메소드를 쓸 수 있었다.  
+근데 Array(n).fill(x) 을 하면 기본 베이스는 만들어놓고 map 메소드를 쓸 수 있었다.
 
 지...자스
+
+---
+
+## 26. 직사각형 별찍기
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12969
+
+### 칭찬해주기
+
+지난번에 배운 repeat 적극활용했다. (소리질러~!!)
