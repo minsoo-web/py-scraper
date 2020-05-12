@@ -556,3 +556,20 @@ https://programmers.co.kr/learn/courses/30/lessons/12950
 우선 가독성이 너무 떨어질 것 같고  
 foreach나 map 보다 for 문이 속도에서 차이가 난다는 소리를 들은 적이 있어서
 모든 원소에 대해서 반복문을 해야하는 만큼 조금이라도 빠른 걸 선택하자는 취지였다.
+
+---
+
+## 25. x만큼 간격이 있는 n개의 숫자
+
+### 문제 원본 보기
+
+https://programmers.co.kr/learn/courses/30/lessons/12954
+
+### 접근 방법
+
+문자열도 안 주어지고 처음부터 배열을 조건에 맞게 만들어 가는거니까  
+push를 사용해야 겠다고 생각했다.
+
+근데 Array(n).fill(x) 을 하면 기본 베이스는 만들어놓고 map 메소드를 쓸 수 있었다.  
+
+지...자스
