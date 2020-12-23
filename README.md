@@ -1,4 +1,14 @@
-# Python web scraper
+<h1 align="center">
+    Python web scraper
+</h1>
+
+<p align="center">
+    <a href="https://img.shields.io">
+        <img alt="python-version" src="https://img.shields.io/badge/python%20version-3.8.2-blue"></a>
+    <a href="https://img.shields.io">
+        <img alt="lovePython" src="https://img.shields.io/badge/love%20python%3F-yes%20%F0%9F%94%A5-red"></a>
+    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FMinsoo-web%2Fpy-scraper&count_bg=%233D6BC8&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=today&edge_flat=false"/></a>
+</p>
 
 ## 🚀 What is this
 
