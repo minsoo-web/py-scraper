@@ -1,0 +1,11 @@
+import csv
+
+
+def save_to_csv(reviews):
+    print("Start Save...")
+    file = open("naver_review.csv", "w")
+    writer = csv.writer(file)
+    writer.writerow(["평점", "만족도", "날짜", "제목", "내용"])
+    for review in reviews:
+        writer.writerow(list(review.values()))
+    return True
