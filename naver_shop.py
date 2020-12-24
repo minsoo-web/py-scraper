@@ -44,8 +44,8 @@ class naver_bs4:
         driver.get(self.__url)
         driver.set_window_size(1920, 1080)
 
-        print("Start Scrapping")
-        # for page in range(1): 테스트용
+        print("Start Scraping")
+        print(f"This will scrap {num_of_total_page} pages")
         for page in range(num_of_total_page):
             self.change_page(page+1)
 
@@ -59,7 +59,7 @@ class naver_bs4:
             self.extract_review()
 
         self.__driver.quit()
-        print("End Scrapping")
+        print("End Scraping")
         return self.__reviews
 
     def change_page(self, num_of_next_page):
