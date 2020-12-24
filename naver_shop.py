@@ -91,7 +91,9 @@ class naver_bs4:
                 f".reviewItems_list_review__1sgcJ > li:nth-child({index + 1}) .reviewItems_average__16Ya-").text
             rating = (rating_before_parse.replace("평점", "")).strip()
 
-            # 만족도
+            # 구매처
+            sales_company = driver.find_element_by_css_selector(
+                f".reviewItems_list_review__1sgcJ > li:nth-child({index + 1}) .reviewItems_etc__1YqVF:nth-child(2)").text
 
             # 날짜
             date = ""
@@ -113,7 +115,7 @@ class naver_bs4:
 
             self.__reviews.append({
                 '평점': rating,
-                '만족도': 1,
+                '판매 회사': sales_company,
                 '날짜': date,
                 '제목': title,
                 '내용': content
