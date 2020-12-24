@@ -1,13 +1,27 @@
-import sys
+import argparse
 
 from naver_shop import naver_bs4
 from save import save_to_csv
 
-NAVER_SHOP_URL = sys.argv[1]
+if __name__ == "__main__":
 
+    parser = argparse.ArgumentParser(description='argparser!')
+    parser.add_argument('--url', '-u', required=True, help='Target URL')
+    parser.add_argument('--limit', '-l', required=False,
+                        help='last page for scraping', default="end")
+    args = parser.parse_args()
 
-naver_review = naver_bs4(NAVER_SHOP_URL)
-last_page = naver_review.get_last_page()
-reviews = naver_review.get_reviews(last_page)
+    NAVER_SHOP_URL = args.url
 
-save_to_csv(reviews)
+    naver_shop = naver_bs4(NAVER_SHOP_URL)
+
+    if args.limit == "end":
+        # limit을 인자로 주지 않으면 default로 모든 페이지
+        last_page = naver_shop.get_last_page()
+    else:
+        # limit을 받았을 경우
+        last_page = int(args.limit)
+
+    reviews = naver_shop.get_reviews(last_page)
+
+    save_to_csv(reviews)
