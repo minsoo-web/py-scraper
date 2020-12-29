@@ -18,8 +18,11 @@
 
 ## 🚀 What is this
 
-`bs4`와 `selenium`을 이용해서 만든 웹스크레퍼입니다.  
-[네이버 쇼핑몰](https://shopping.naver.com/)의 상세 페이지에서 리뷰들을 가져올 수 있습니다.
+`bs4`와 `selenium`을 이용해서 만든 웹스크레퍼입니다.
+
+1. [네이버 쇼핑몰](https://shopping.naver.com/)의 상세 페이지에서 리뷰들을 가져와 csv 파일로 추출할 수 있습니다.
+2. 특정 item의 연관 검색어를 list로 추출할 수 있습니다.
+3. 특정 item의 전체 검색 갯수를 int로 추출할 수 있습니다.
 
 ### 추출 데이터
 
@@ -45,6 +48,7 @@ selenium
 ```bash
 # ~/your_work_space/py-scraper
 $ python app.py -u {url} -l {limits of page}
+$ python related_search.py -i {search_item}
 ```
 
 ### ✔️ 예제
@@ -54,8 +58,19 @@ $ python app.py -u {url} -l {limits of page}
 $ python app.py -u "https://search.shopping.naver.com/catalog/15784793132?cat_id=50002334&nv_mid=15784793132&query=jbl+free+x" -l 2
 # 예제 모든 페이지 스크랩 default 가 모든 페이지입니다.
 $ python app.py -u "https://search.shopping.naver.com/catalog/15784793132?cat_id=50002334&nv_mid=15784793132&query=jbl+free+x"
+
 # 인자 값 도움말
 $ python app.py --help
+```
+
+### ✔️ 연관 검색어 예제
+
+```bash
+# 네이버 쇼핑에서 제공하는 롱패딩과 관련된 연관 검색어를 추출
+$ python related_search.py -i "롱패딩"
+# 네이버 쇼핑에서 제공하는 가디건과 관련된 연관 검색어를 추출
+$ python related_search.py --item "가디건"
+
 ```
 
 ### 📷 실행 화면
@@ -74,6 +89,10 @@ $ python app.py --help
 1,1,18.10.08,리뷰제목,리뷰내용
 ...
 ```
+
+> related_search.py
+
+![실행 화면](./images/run2.png)
 
 ### 📷 결과 미리보기
 
