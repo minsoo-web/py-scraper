@@ -5,10 +5,10 @@ from math import ceil
 from selenium import webdriver
 from bs4 import BeautifulSoup
 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions  # 상태 확인
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.action_chains import ActionChains
+# from selenium.webdriver.common.by import By
+# from selenium.webdriver.support import expected_conditions  # 상태 확인
+# from selenium.webdriver.support.ui import WebDriverWait
+# from selenium.webdriver.common.action_chains import ActionChains
 
 
 class naver_bs4:
@@ -65,7 +65,8 @@ class naver_bs4:
     def change_page(self, num_of_next_page):
         driver = self.__driver
         driver.find_element_by_css_selector(
-            f"[class='reviewItems_list_review__1sgcJ'] + .pagination_pagination__2M9a4 > a[data-nclick='N=a:rev.page,r:{num_of_next_page}']").click()
+            f"[class='reviewItems_list_review__1sgcJ'] + .pagination_pagination__2M9a4 > a[data-nclick='N=a:rev.page,r:{num_of_next_page}']"
+        ).click()
 
     def extract_review(self):
 
