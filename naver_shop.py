@@ -1,3 +1,4 @@
+import re
 import requests
 import time
 
@@ -11,7 +12,7 @@ from bs4 import BeautifulSoup
 # from selenium.webdriver.common.action_chains import ActionChains
 
 
-class naver_bs4:
+class naver_review:
     def __init__(self, url):
         options = webdriver.ChromeOptions()
         options.add_argument('--headless')
@@ -23,19 +24,17 @@ class naver_bs4:
         self.__url = url
         self.__reviews = []
 
-    def parser(self, before_parse_str):
-        before_comma_parse = before_parse_str[1:len(before_parse_str)-1]
-        parsed_str = int(before_comma_parse.replace(",", ""))
-        return parsed_str
-
     def get_last_page(self):
         result = requests.get(self.__url)
         soup = BeautifulSoup(result.text, 'html.parser')
         ul_pagination = soup.find("ul", {"class": "filter_top_list__3rOdK"})
-        total_number_of_reviews = ul_pagination.find(
+        # (8,000) 이런식으로 추출 됨
+        before_parse_str = ul_pagination.find(
             "li", {"class": "filter_on__X0_Fb"}).find("em").text
+        # 정규 표현식을 통해 ()와 , 을 제거
+        total_number_of_reviews = int(re.sub(r'\D', '', before_parse_str))
 
-        total_page = ceil(self.parser(total_number_of_reviews) / 20)
+        total_page = ceil(total_number_of_reviews / 20)
 
         return total_page
 
