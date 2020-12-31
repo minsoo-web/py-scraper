@@ -51,18 +51,18 @@ selenium
 
 ```bash
 # ~/your_work_space/py-scraper
-$ python app.py -u {url} -l {limits of page} # 리뷰 크롤링
-$ python related_search.py -i {search_item} # 연관 검색어
-$ python naver_search.py -i {search_item} # 쇼핑 키워드 순서 추출
+$ python app.py review -u {url} -l {limits of page} # 리뷰 크롤링
+$ python app.py related -i {search_item} # 연관 검색어
+$ python app.py keyword -i {search_item} # 쇼핑 키워드 순서 추출
 ```
 
 ### ✔️ 예제
 
 ```bash
 # 예제 2 페이지만 스크랩
-$ python app.py -u "https://search.shopping.naver.com/catalog/15784793132?cat_id=50002334&nv_mid=15784793132&query=jbl+free+x" -l 2
-# 예제 모든 페이지 스크랩 default 가 모든 페이지입니다.
-$ python app.py -u "https://search.shopping.naver.com/catalog/15784793132?cat_id=50002334&nv_mid=15784793132&query=jbl+free+x"
+$ python app.py review -u "https://search.shopping.naver.com/catalog/15784793132?cat_id=50002334&nv_mid=15784793132&query=jbl+free+x" -l 2
+# 예제 모든 페이지 스크랩 default 가 모든 페이지입니다. 함축표현 'csv' 로도 가능합니다.
+$ python app.py csv -u "https://search.shopping.naver.com/catalog/15784793132?cat_id=50002334&nv_mid=15784793132&query=jbl+free+x"
 
 # 인자 값 도움말
 $ python app.py --help
@@ -71,19 +71,18 @@ $ python app.py --help
 ### ✔️ 연관 검색어 예제
 
 ```bash
-# 네이버 쇼핑에서 제공하는 롱패딩과 관련된 연관 검색어를 추출
-$ python related_search.py -i "롱패딩"
 # 네이버 쇼핑에서 제공하는 가디건과 관련된 연관 검색어를 추출
-$ python related_search.py --item "가디건"
+$ python app.py related --item "가디건"
+# 함축 표현
+$ python app.py re -i "롱패딩"
 ```
 
 ### ✔️ 쇼핑 키워드 예제
 
 ```bash
 # 네이버 검색에서 데스크톱 / 모바일 기준으로 쇼핑 카테고리 + 섹션 순서를 추출
-$ python naver_search.py --item "키보드"
-$ python naver_search.py --item "아이폰"
-$ python naver_search.py -i "물통"
+$ python app.py keyword --item "키보드"
+$ python app.py key -i "물통"
 ```
 
 ### 📷 실행 화면
